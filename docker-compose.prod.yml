@@ -1,0 +1,39 @@
+version: "2.1"
+
+services:
+  node-api-prod:
+    container_name: node-api-prod
+    build:
+      context: .
+      dockerfile: .docker/app.prod.dockerfile
+    restart: on-failure
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    env_file: .env
+    networks:
+      - development
+
+  mysql:
+    container_name: mysql
+    image: mysql:5.7.27
+    restart: always
+    environment:
+      MYSQL_DATABASE: nodejsapi
+      MYSQL_USER: nodeuser
+      MYSQL_PASSWORD: nodeuserpass
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    networks:
+      - development
+
+networks:
+  development:
