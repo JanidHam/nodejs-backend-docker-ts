@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
     "allowUnreachableCode": false,
-    "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -12,11 +11,26 @@
     "noImplicitUseStrict": false,
     "strictNullChecks": true,
     "target": "es6",
-    "rootDir": "./src",
     "outDir": "./dist",
     "inlineSourceMap": true,
     "removeComments": true,
     "pretty": true,
     "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@db/*": ["db/*"],
+      "@api/*": ["api/*"],
+      "@auth/*": ["auth/*"],
+      "@utils/*": ["utils/*"],
+      "@errors/*": ["errors/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@db": ["db"],
+      "@api": ["api"],
+      "@auth": ["auth"],
+      "@utils": ["utils"],
+      "@errors": ["errors"],
+      "@middlewares": ["middlewares"],
+    }
   },
+  "exclude": ["node_modules", "test", "jest.config.js", "dist"]
 }

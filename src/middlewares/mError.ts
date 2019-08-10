@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import { getLogger } from '../utils'
+import { getLogger } from '@utils'
 
 const log = getLogger(__dirname, __filename)
 

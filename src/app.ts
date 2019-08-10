@@ -1,5 +1,7 @@
+import 'module-alias/register'
+
 import server from './server'
-import { terminate } from './utils'
+import { terminate } from '@utils'
 
 import db from './db'
 

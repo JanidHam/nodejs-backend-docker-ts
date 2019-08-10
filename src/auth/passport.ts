@@ -1,8 +1,8 @@
-import User from '../db/models/User'
-import OAuth from '../db/models/OAuth'
+import User from '@db/models/User'
+import OAuth from '@db/models/OAuth'
 
-import { signToken, verifyPassword } from '../utils/auth'
-import { BadRequest, UnAuthorized, ServerError } from '../errors'
+import { signToken, verifyPassword } from '@utils/auth'
+import { BadRequest, UnAuthorized, ServerError } from '@errors'
 
 const serializeUser = (user: any, done: (error: any, user: any) => void) => {
   done(null, user)

@@ -1,5 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express'
-import { isLogginIn } from '../middlewares/auth'
+import { isLogginIn } from '@middlewares/auth'
 
 export class HelloRoutes {
   public router: Router

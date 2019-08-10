@@ -1,5 +1,5 @@
 import * as path from 'path'
-import { getLogger } from '../utils'
+import { getLogger } from '@utils'
 
 const glob = require('glob')
 const { promisify } = require('util')

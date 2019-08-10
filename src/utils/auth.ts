@@ -1,8 +1,7 @@
 import * as jwt from 'jsonwebtoken'
-import { randomBytes } from 'crypto'
 
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+const bcrypt = require('bcrypt')
+const saltRounds = 10
 
 import { authConfig } from '../config'
 

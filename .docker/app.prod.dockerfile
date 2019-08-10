@@ -22,10 +22,6 @@ RUN npm install --only=development
 
 RUN npm run build
 
-COPY ["./src/db/seeds", "./dist/db/seeds"]
-COPY ["./src/db/knexfile.js", "./dist/db/"]
-COPY ["./src/db/migrations", "./dist/db/migrations"]
-
 # Productive image install node
 FROM node:10.16.1-alpine
 

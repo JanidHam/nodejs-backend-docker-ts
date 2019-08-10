@@ -21,6 +21,7 @@ node_modules/
 
 # Build
 dist/
+build/
 
 # Local data for database
 data/

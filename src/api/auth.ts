@@ -1,8 +1,8 @@
 import { Router, Request, Response, NextFunction } from 'express'
 
-import { isLogginIn } from '../middlewares/auth'
-import { loginUser, signUpUser } from '../auth/passport'
-import OAuth from '../db/models/OAuth';
+import OAuth from '@db/models/OAuth'
+import { isLogginIn } from '@middlewares/auth'
+import { loginUser, signUpUser } from '@auth/passport'
 
 export class AuthRoutes {
   public router: Router

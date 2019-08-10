@@ -1,6 +1,6 @@
 import * as passportBearer from 'passport-http-bearer'
 
-import OAuth from '../db/models/OAuth'
+import OAuth from '@db/models/OAuth'
 
 const bearerStrategy = new passportBearer.Strategy(async (token, done) => {
   try {
