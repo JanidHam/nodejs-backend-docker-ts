@@ -1,9 +1,19 @@
-import 'module-alias/register'
+const moduleAlias = require('module-alias')
 
-import server from './server'
+moduleAlias.addAliases({
+  '@root'  : __dirname,
+  '@api': `${__dirname}/api`,
+  '@db': `${__dirname}/db`,
+  '@auth': `${__dirname}/auth`,
+  '@utils': `${__dirname}/utils`,
+  '@errors': `${__dirname}/errors`,
+  '@middlewares': `${__dirname}/middlewares`,
+})
+
+import server from '@root/server'
 import { terminate } from '@utils'
 
-import db from './db'
+import db from '@db'
 
 const initApp = async function initApp() {
   try {

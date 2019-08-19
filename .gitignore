@@ -28,3 +28,5 @@ data/
 
 # VSCode
 .vscode/
+
+.DS_STORE
