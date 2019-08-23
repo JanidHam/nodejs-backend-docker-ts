@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-api-docker-ts",
+  "name": "nodejs-backend-docker-ts",
   "version": "1.0.0",
   "description": "Node.js API in Typescript running with docker boilerplate",
   "main": "server.js",
